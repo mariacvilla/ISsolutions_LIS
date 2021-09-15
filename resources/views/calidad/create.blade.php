@@ -12,52 +12,54 @@
   </head>
 
   <body>
-    <div class="container">
-        <div>Registro suero control</div>
+    <div class="container" style="border:1px solid rgb(201, 200, 200);">
+        <div style="background:#008073;margin-left:0px;text-align:center;color:white;height:40px">
+            <h4>Registro suero control</h4>
+        </div>
         <form action="/calidad" method="POST">
         @csrf
-        <div class="mb-3">
-            <label for="" class="form-label">Col Total Nivel I</label>
-            <input type="float" class="form-control" id="ColTotal1" name="ColTotal1">
+        <div class="mb-2">
+            <label for="" class="form-label" style="margin-bottom:0px">Col Total Nivel I</label>
+            <input type="float" class="form-control" id="ColTotal1" name="ColTotal1" style="height:25px">
         </div>
-        <div class="mb-3">
-            <label for="" class="form-label"> Col Total Nivel II</label>
-            <input type="float" class="form-control" id="ColTotal2" name="ColTotal2">
+        <div class="mb-2">
+            <label for="" class="form-label" style="margin-bottom:0px"> Col Total Nivel II</label>
+            <input type="float" class="form-control" id="ColTotal2" name="ColTotal2" style="height:25px">
         </div>
-        <div class="mb-3">
-            <label for="" class="form-label"> HDL Nivel I</label>
-            <input type="float" class="form-control" id="HDL1" name="HDL1">
+        <div class="mb-2">
+            <label for="" class="form-label" style="margin-bottom:0px"> HDL Nivel I</label>
+            <input type="float" class="form-control" id="HDL1" name="HDL1" style="height:25px">
         </div>
-        <div class="mb-3">
-            <label for="" class="form-label"> HDL Nivel II</label>
-            <input type="float" class="form-control" id="HDL2" name="HDL2">
+        <div class="mb-2">
+            <label for="" class="form-label" style="margin-bottom:0px"> HDL Nivel II</label>
+            <input type="float" class="form-control" id="HDL2" name="HDL2" style="height:25px">
         </div>
-        <div class="mb-3">
-            <label for="" class="form-label"> LDL Nivel I</label>
-            <input type="float" class="form-control" id="LDL1" name="LDL1">
+        <div class="mb-2">
+            <label for="" class="form-label" style="margin-bottom:0px"> LDL Nivel I</label>
+            <input type="float" class="form-control" id="LDL1" name="LDL1" style="height:25px">
         </div>
-        <div class="mb-3">
-            <label for="" class="form-label"> LDL Nivel II</label>
-            <input type="float" class="form-control" id="LDL2" name="LDL2">
+        <div class="mb-2">
+            <label for="" class="form-label" style="margin-bottom:0px"> LDL Nivel II</label>
+            <input type="float" class="form-control" id="LDL2" name="LDL2" style="height:25px">
         </div>
-        <div class="mb-3">
-            <label for="" class="form-label"> Triglicéridos Nivel I</label>
-            <input type="float" class="form-control" id="Trigliceridos1" name="Trigliceridos1">
+        <div class="mb-2">
+            <label for="" class="form-label" style="margin-bottom:0px"> Triglicéridos Nivel I</label>
+            <input type="float" class="form-control" id="Trigliceridos1" name="Trigliceridos1" style="height:25px">
         </div>
-        <div class="mb-3">
-            <label for="" class="form-label"> Triglicéridos Nivel II</label>
-            <input type="float" class="form-control" id="Trigliceridos2" name="Trigliceridos2">
+        <div class="mb-2">
+            <label for="" class="form-label" style="margin-bottom:0px"> Triglicéridos Nivel II</label>
+            <input type="float" class="form-control" id="Trigliceridos2" name="Trigliceridos2" style="height:25px">
         </div>
-        <div class="mb-3">
-            <label for="" class="form-label"> Fecha</label>
-            <input type="text" class="form-control" id="fecha" name="fecha">
+        <div class="mb-2">
+            <label for="" class="form-label" style="margin-bottom:0px"> Fecha</label>
+            <input type="text" class="form-control" id="fecha" name="fecha" style="height:25px">
         </div>
-        <div class="mb-3">
-            <label for="" class="form-label"> Hora</label>
-            <input type="text" class="form-control" id="hora" name="hora">
+        <div class="mb-2">
+            <label for="" class="form-label" style="margin-bottom:0px"> Hora</label>
+            <input type="text" class="form-control" id="hora" name="hora" style="height:25px">
         </div>
-        <a href="/calidad" class="btn btn-primary">Cancelar</a>
-        <button type="submit" class="btn btn-primary">Registrar</button>
+        <a href="/calidad" class="btn btn-primary" style="background: #008073;border: 1px solid #008073;">Cancelar</a>
+        <button type="submit" class="btn btn-primary" style="background: #008073;border: 1px solid #008073;">Registrar</button>
     </form>
     </div>
 </body>
