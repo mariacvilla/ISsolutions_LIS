@@ -2,11 +2,6 @@
 
 @section('css')
 <link href="https://cdn.datatables.net/1.11.1/css/dataTables.bootstrap5.min.css" rel='stylesheet'>
-<style>
-.page-item.active .page-link {
-  background: #0070C0 !important;
-}
-</style>
 @endsection
 
 @section('content')

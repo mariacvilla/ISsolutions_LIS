@@ -12,7 +12,7 @@
   
   <body>
     <div class="container">
-    <form method="POST" action="">
+    <form method="POST" action="/resultados">
     @csrf
     <input name="documento" placeholder="documento">
     <button type="submit" class="btn btn-primary">Enviar</button></form>
