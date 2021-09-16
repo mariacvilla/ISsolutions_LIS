@@ -2,46 +2,56 @@
 
 @section('css')
 <link href="https://cdn.datatables.net/1.11.1/css/dataTables.bootstrap5.min.css" rel='stylesheet'>
+<style>
+    #linea1,#linea2{
+        display: inline-block;
+    }
+    .page-item.active .page-link {
+    background: #0070C0 !important;
+}
+</style>
 @endsection
 
 @section('content')
 <br>
 <div class="container">
 <div class="table-responsive">
-<table class="table align-middle table-hover table-bordered border-primary" id="patients">
+<table class="table align-middle" id="patients">
   <thead>
       <tr>
-          <th scope="col">Código</th>
-          <th scope="col">Documento</th>
-          <th scope="col">Nombres</th>
-          <th scope="col">Apellidos</th>
-          <th scope="col">Resultados</th>
-          <th scope="col"></th>
-          <th scope="col"></th>
+          <th style="background:#0070C0;color:white" scope="col">Código</th>
+          <th style="background:#0070C0;color:white" scope="col">Documento</th>
+          <th style="background:#0070C0;color:white" scope="col">Nombres</th>
+          <th style="background:#0070C0;color:white" scope="col">Apellidos</th>
+          <th style="background:#0070C0;color:white" scope="col">Resultados</th>
+          <th style="background:#0070C0;color:white" scope="col">Acción</th>
+          
       </tr>
   </thead>
   <tbody>
       @foreach($patients as $patient)
       <tr>
-          <th>{{ $patient->id }}</th>
-          <th>{{ $patient->documento }}</th>
-          <th>{{ $patient->nombre }}</th>
-          <th>{{ $patient->apellido }}</th>
+          <th style="font-weight:normal">{{ $patient->id }}</th>
+          <th style="font-weight:normal">{{ $patient->documento }}</th>
+          <th style="font-weight:normal">{{ $patient->nombre }}</th>
+          <th style="font-weight:normal">{{ $patient->apellido }}</th>
           <th>
             <form action="{{route('patients.show', $patient->id)}}" method="POST">
                 @csrf
                 @method('GET')
-                <button type='' class="btn btn-link">Consultar</button>
+                <button type='' class="btn  text-white " style="background:#0070C0">Consultar</button>
             </form>
           </th>
-          <th><a href="/patients/{{$patient->id}}/edit" class="btn btn-link">editar></th></th>
-          <th>
-              <form action="{{route('patients.destroy', $patient->id)}}" method="POST">
+          <th> 
+          <form action="{{route('patients.destroy', $patient->id)}}" method="POST">
+                <a href="/patients/{{$patient->id}}/edit" class="btn text-white " id="linea" style="background:#0070C0">Editar</a>
                   @csrf
                   @method('DELETE')
-                  <button type='submit' class="btn btn-link">Borrar</button>
-                </form>
-            </th>
+                  <button type='submit' class="btn  text-white"  id="linea2" style="background:#0070C0" >Borrar</button>
+            </form>
+            
+        </th>
+          
       </tr>
       @endforeach
   </tbody>
@@ -61,11 +71,11 @@ $(document).ready(function() {
         "lenghtMenu": [[5,10,50,-1], [5,10,50,'ALL']],
         "language":{
             processing: "Procesando...",
-            lengthMenu: "Mostrar _MENU_ registros",
+            lengthMenu: "Mostrar _MENU_ pacientes",
             zeroRecords: "No se encontraron resultados",
             emptyTable: "Ningún dato disponible en esta tabla",
             infoEmpty: "Mostrando registros del 0 al 0 de un total de 0 pacientes",
-            infoFiltered: "(filtrado de un total de _MAX_ registros)",
+            infoFiltered: "(filtrado de un total de _MAX_ pacientes)",
             "info": "Mostrando _START_ a _END_ de _TOTAL_ pacientes",
             search: "Buscar:",
             infoThousands: ",",

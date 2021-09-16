@@ -7,23 +7,33 @@
     @yield('css')
     <!-- Bootstrap CSS -->
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-F3w7mX95PdgyTmZZMECAngseQB83DfGTowi0iMjiWaeVhAn4FJkqJByhZMI3AhiU" crossorigin="anonymous">
-
+    <style>
+      .nav{
+        display:flex;
+        background: -webkit-linear-gradient(left, rgb(0, 112,192) 30%, rgb(0,176,80) 80%);
+        height:65px;
+      }
+      .nav-item{
+        font-size: 20px;
+        margin-top: 6px;
+      }
+    </style>
     <title>LIS</title>
   </head>
 
   <body>
-      <ul class="nav justify-content-center">
+      <ul class="nav justify-content-center ">
           <li class="nav-item">
-              <a class="nav-link" aria-current="page" href="patients/create">Registro Paciente</a>
+              <a class="nav-link text-white" aria-current="page" href="patients/create">Registro Paciente</a>
             </li>
             <li class="nav-item">
-                <a class="nav-link" href="/patients">Consulta Pacientes</a>
+                <a class="nav-link text-white" href="/patients">Consulta Pacientes</a>
             </li>
             <li class="nav-item">
-                <a class="nav-link" href="/calidad/create">Registro control de calidad</a>
+                <a class="nav-link text-white" href="/calidad/create">Registro control de calidad</a>
             </li>
             <li class="nav-item">
-                <a class="nav-link" href="/calidad">Consulta control de calidad</a>
+                <a class="nav-link text-white" href="/calidad">Consulta control de calidad</a>
             </li>
         </ul>
 

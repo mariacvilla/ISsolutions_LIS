@@ -13,7 +13,7 @@
 
   <body>
     <div class="container" style="border:1px solid rgb(201, 200, 200);">
-        <div style="background:#008073;margin-left:0px;text-align:center;color:white;height:40px">
+        <div style="background: -webkit-linear-gradient(left, rgb(0, 112,192) 30%, rgb(0,176,80) 70%);margin-left:0px;text-align:center;color:white;height:40px">
             <h4>Registro suero control</h4>
         </div>
         <form action="/calidad" method="POST">
@@ -58,8 +58,10 @@
             <label for="" class="form-label" style="margin-bottom:0px"> Hora</label>
             <input type="text" class="form-control" id="hora" name="hora" style="height:25px">
         </div>
-        <a href="/calidad" class="btn btn-primary" style="background: #008073;border: 1px solid #008073;">Cancelar</a>
-        <button type="submit" class="btn btn-primary" style="background: #008073;border: 1px solid #008073;">Registrar</button>
+        <div  style="text-align:center">
+        <a href="/calidad" class="btn btn-primary" style="background: #0070C0;border: 1px solid #008073">Cancelar</a>
+        <button type="submit" class="btn btn-primary"  style="background: #0070C0;border: 1px solid #008073">Registrar</button>
+        </div>
     </form>
     </div>
 </body>

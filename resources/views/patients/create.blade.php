@@ -13,7 +13,7 @@
 
   <body>
     <div class="container" style="border:1px solid rgb(201, 200, 200);">
-        <div style="background:#008073;margin-left:0px;text-align:center;color:white;height:40px">
+        <div style="background: -webkit-linear-gradient(left, rgb(0, 112,192) 30%, rgb(0,176,80) 70%);margin-left:0px;text-align:center;color:white;height:40px">
             <h4>Registro del paciente</h4>
         </div>
         <form action="/patients" method="POST" >
@@ -66,8 +66,11 @@
             <label for="" class="form-label" style="margin-bottom:0px">Triglicéridos</label>
             <input type="float" class="form-control" id="trigliceridos" name="trigliceridos" style="height:25px">
         </div>
-        <a href="/patients" class="btn btn-primary" style="background: #008073;border: 1px solid #008073;" >Cancelar</a>
-        <button type="submit" class="btn btn-primary" style="background: #008073;border: 1px solid #008073">Registrar paciente</button>
+        <div style="text-align:center">
+        <a href="/patients" class="btn btn-primary" style="background: #0070C0;border: 1px solid #008073" >Cancelar</a>
+        <button type="submit" class="btn btn-primary" style="background:#0070C0;border: 1px solid #008073">Registrar paciente</button>
+
+        </div>
     </form>
     </div>
 </body>

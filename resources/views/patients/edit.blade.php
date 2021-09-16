@@ -13,61 +13,65 @@
 
 <body>
 <br>
-<div class="container">
-    <div>Editar información paciente</div>
+<div class="container" style="border:1px solid rgb(201, 200, 200);">
+    <div style="background: -webkit-linear-gradient(left, rgb(0, 112,192) 30%, rgb(0,176,80) 70%);margin-left:0px;text-align:center;color:white;height:40px">
+        <h4>Registro del paciente</h4>
+    </div>
     <form action="/patients/{{$patient->id}}" method="POST">
     @csrf
     @method('PUT')
-    <div class="mb-3">
-        <label for="" class="form-label">Documento</label>
-        <input type="text" class="form-control" id="documento" name="documento" value="{{$patient->documento}}">
+    <div class="mb-2">
+        <label for="" class="form-label" style="margin-bottom:0px">Documento</label>
+        <input type="text" class="form-control" id="documento" name="documento" value="{{$patient->documento}}" style="height:25px">
     </div>
-    <div class="mb-3">
-        <label for="" class="form-label">Nombres</label>
-        <input type="text" class="form-control" id="nombre" name="nombre" value="{{$patient->nombre}}">
+    <div class="mb-2">
+        <label for="" class="form-label" style="margin-bottom:0px">Nombres</label>
+        <input type="text" class="form-control" id="nombre" name="nombre" value="{{$patient->nombre}}" style="height:25px">
     </div>
-    <div class="mb-3">
-        <label for="" class="form-label">Apellidos</label>
-        <input type="text" class="form-control" id="apellido" name="apellido" value="{{$patient->apellido}}">
+    <div class="mb-2">
+        <label for="" class="form-label" style="margin-bottom:0px">Apellidos</label>
+        <input type="text" class="form-control" id="apellido" name="apellido" value="{{$patient->apellido}}" style="height:25px">
     </div>
-    <div class="mb-3">
-        <label for="" class="form-label">Telefono</label>
-        <input type="text" class="form-control" id="telefono" name="telefono" value="{{$patient->telefono}}">
+    <div class="mb-2">
+        <label for="" class="form-label" style="margin-bottom:0px">Telefono</label>
+        <input type="text" class="form-control" id="telefono" name="telefono" value="{{$patient->telefono}}" style="height:25px">
     </div>
-    <div class="mb-3">
-        <label for="" class="form-label">Correo</label>
-        <input type="email" class="form-control" id="correo" name="correo" value="{{$patient->correo}}">
+    <div class="mb-2">
+        <label for="" class="form-label" style="margin-bottom:0px">Correo</label>
+        <input type="email" class="form-control" id="correo" name="correo" value="{{$patient->correo}}" style="height:25px">
     </div>
-    <div class="mb-3">
-        <label for="" class="form-label">Edad</label>
-        <input type="text" class="form-control" id="edad" name="edad" value="{{$patient->edad}}">
+    <div class="mb-2">
+        <label for="" class="form-label" style="margin-bottom:0px">Edad</label>
+        <input type="text" class="form-control" id="edad" name="edad" value="{{$patient->edad}}" style="height:25px">
     </div>
-    <div class="mb-3">
-        <label for="" class="form-label">EPS</label>
-        <input type="text" class="form-control" id="eps" name="eps" value="{{$patient->eps}}">
+    <div class="mb-2">
+        <label for="" class="form-label" style="margin-bottom:0px">EPS</label>
+        <input type="text" class="form-control" id="eps" name="eps" value="{{$patient->eps}}" style="height:25px">
     </div>
-    <div class="mb-3">
-        <label for="" class="form-label">RH</label>
-        <input type="text" class="form-control" id="rh" name="rh" value="{{$patient->rh}}">
+    <div class="mb-2">
+        <label for="" class="form-label" style="margin-bottom:0px">RH</label>
+        <input type="text" class="form-control" id="rh" name="rh" value="{{$patient->rh}}" style="height:25px">
     </div>
-    <div class="mb-3">
-        <label for="" class="form-label">Col Total</label>
-        <input type="float" class="form-control" id="col" name="col" value="{{$patient->col}}">
+    <div class="mb-2">
+        <label for="" class="form-label" style="margin-bottom:0px">Col Total</label>
+        <input type="float" class="form-control" id="col" name="col" value="{{$patient->col}}" style="height:25px">
     </div>
-    <div class="mb-3">
-        <label for="" class="form-label">HDL</label>
-        <input type="float" class="form-control" id="hdl" name="hdl" value="{{$patient->hdl}}">
+    <div class="mb-2">
+        <label for="" class="form-label" style="margin-bottom:0px">HDL</label>
+        <input type="float" class="form-control" id="hdl" name="hdl" value="{{$patient->hdl}}" style="height:25px">
     </div>
-    <div class="mb-3">
-        <label for="" class="form-label">LDL</label>
-        <input type="float" class="form-control" id="ldl" name="ldl" value="{{$patient->ldl}}">
+    <div class="mb-2">
+        <label for="" class="form-label" style="margin-bottom:0px">LDL</label>
+        <input type="float" class="form-control" id="ldl" name="ldl" value="{{$patient->ldl}}" style="height:25px">
     </div>
-    <div class="mb-3">
-        <label for="" class="form-label">Triglicéridos</label>
+    <div class="mb-2">
+        <label for="" class="form-label" style="margin-bottom:0px">Triglicéridos</label>
         <input type="float" class="form-control" id="trigliceridos" name="trigliceridos" value="{{$patient->trigliceridos}}">
     </div>
-    <a href="/patients" class="btn btn-primary">Cancelar</a>
-    <button type="submit" class="btn btn-primary">editar paciente</button>
+    <div style="text-align:center">
+    <a href="/patients" class="btn btn-primary" style="background: #0070C0;border: 1px solid #008073" >Cancelar</a>
+    <button type="submit" class="btn btn-primary" style="background: #0070C0;border: 1px solid #008073" >Editar paciente</button>
+    </div>
 </form>
 </div>
 </body>

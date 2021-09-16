@@ -14,18 +14,23 @@
     .triangulo-equilatero-bottom-left {
      width: 0;
      height: 0;
-     background: -webkit-linear-gradient(left,red,orange,yellow, green, blue,indigo,violet);
      border-right: 320px solid transparent;
      border-top: 320px solid transparent;
-     border-left: 320px solid #28784c;
-     border-bottom: 320px solid #28784c;
+     border-left: 320px solid  rgb(0,176,80);
+     border-bottom: 320px solid rgb(0,176,80);
+     
+    }
+
+    .cuadrado {
+     width: 400px; 
+     height: 657px; 
+     background: -webkit-linear-gradient(top, rgb(0, 112,192) 30%, rgb(0,176,80) 70%);
     }
 
     .wrapper {
       display: grid;
       grid-template-columns: repeat(3, 1fr);
       grid-gap: 10px;
-      grid-auto-rows: minmax(100px, auto);
     }
     .one {
       /*background: red;*/ 
@@ -72,30 +77,34 @@
   <body>
     <div class="wrapper">
       <div class="one">
-        <div class="triangulo-equilatero-bottom-left" ></div>
+        <div class="cuadrado" ></div>
       </div>
-      <div class="two" style="color:white">
+      <div class="two" style="color:white; margin-left:2rem; font-size:25px" >
         Powered by:
-        <img src="imagenes/logo_60.png">
+        <img src="{{ asset('img/logo_60.png') }}" style="width : 200px; heigth : 200px">
       </div>
+      
       <div class="three" style="text-align:center;">
+        <br>
         <h1 style="font-weight: 600; color: rgb(119, 118, 118);">Bienvenido al Sistema de información de Laboratorio clínico</h1>
       </div>
       <div class="four">
         <div class="container">
           <form method="POST" action="/resultados">
           @csrf
+          <br>
+          <br>
           <div style="color:gray">
             Ingrese su número de documento si desea conocer el resultado de la prueba del perfil lipídico
           </div>
           <input name="documento" placeholder="Documento" style="width : 500px; heigth : 1px">
           <div style="margin:20px;">
-            <button type="submit" class="btn btn-success" style="height:40px; width:200px;">Enviar</button></form>
+            <button type="submit" class="btn btn-success" style="height:40px; width:200px; background:rgb(0,176,80)">Enviar</button></form>
           </div>
         </div>
       </div>
       <div class="five" >
-        <a style="margin-left: 450px;" href="/patients" class="btn btn-primary">Ingreso como bacteriólogo</a>
+        <a style="margin-left: 650px; background: #0070C0" href="/patients" class="btn btn-primary">Ingreso como bacteriólogo</a>
       </div>
     </div>
     

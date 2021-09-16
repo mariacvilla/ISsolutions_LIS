@@ -12,84 +12,121 @@
   </head>
 
 <body>
-<div class="container">
+<div class="container align-middle">
+  <div class="row" style="background: -webkit-linear-gradient(left, rgb(0, 112,192) 30%, rgb(0,176,80) 80%) ;text-align: center; color:white;height:65px; font-size: 20px">
+    <div class="col-12">
+      <h4 style="margin-top: 14px" >Resultado perfil lipídico</h4>
+    </div>
+  </div>
+  <br>
+  <br>
+  <div class="row">
+  <div class="container">
 <div class="table-responsive">
-<table class="table align-middle table-hover table-bordered border-primary" id="patients">
+<table class="table align-middle table-borderless" id="patients">
   <thead>
       @foreach($patient as $patient)
       <tr>
-          <th scope="col">Resultado perfíl lipídico</th>
-          <th scope="col">Código paciente</th>
-          <th scope="col">{{$patient->id}}</th>
-          <th scope="col"></th>
+          <th style="background:#0070C0;color:white;text-align: center" scope="col">Código paciente</th>
+          <th style="font-weight:normal;text-align: center" scope="col">{{$patient->id}}</th>
+          <th  scope="col"></th>
       </tr>
   </thead>
   <tbody>
       <tr>
-          <th>Nombre</th>
-          <th>{{ $patient->nombre }} {{ $patient->apellido }}</th>
-          <th>Documento</th>
-          <th>{{ $patient->documento }}</th>
+      <th  scope="col"></th>
+      <th  scope="col"></th>
       </tr>
       <tr>
-        <th>Teléfono</th>
-        <th>{{ $patient->telefono }}</th>
-        <th>EPS</th>
-        <th>{{ $patient->eps }}</th>
+          <th style="background:#0070C0;color:white;text-align: center">Nombre</th>
+          <th style="font-weight:normal;text-align: center">{{ $patient->nombre }} {{ $patient->apellido }}</th>
+          <th style="background:#0070C0;color:white;text-align: center">Documento</th>
+          <th style="font-weight:normal;text-align: center">{{ $patient->documento }}</th>
       </tr>
       <tr>
-        <th>Correo electrónico</th>
-        <th>{{ $patient->correo }}</th>
-        <th>RH</th>
-        <th>{{ $patient->rh }}</th>
+      <th  scope="col"></th>
+      <th  scope="col"></th>
+      </tr>
+      <tr>
+        <th style="background:#0070C0;color:white;text-align: center">Teléfono</th>
+        <th style="font-weight:normal;text-align: center">{{ $patient->telefono }}</th>
+        <th style="background:#0070C0;color:white;text-align: center">EPS</th>
+        <th style="font-weight:normal;text-align: center">{{ $patient->eps }}</th>
+      </tr>
+      <tr>
+      <th  scope="col"></th>
+      <th  scope="col"></th>
+      </tr>
+      <tr>
+        <th style="background:#0070C0;color:white;text-align: center">Correo electrónico</th>
+        <th style="font-weight:normal;text-align: center">{{ $patient->correo }}</th>
+        <th style="background:#0070C0;color:white;text-align: center" >RH</th>
+        <th style="font-weight:normal;text-align: center">{{ $patient->rh }}</th>
       </tr>
   </tbody>
 </table>
 </div>
 </div>
 
+
 <div class="container">
+<br>
 <div class="table-responsive">
-<table class="table align-middle table-hover table-bordered border-primary" id="results">
+<table class="table align-middle" id="results">
   <thead>
       <tr>
-          <th scope="col">Tipo de estudio</th>
-          <th scope="col">Rango peligroso</th>
-          <th scope="col">Rango deseado</th>
-          <th scope="col">Resultado del estudio</th>
+          <th style="background:#0070C0;color:white;text-align: center" scope="col">Tipo de estudio</th>
+          <th style="background:#0070C0;color:white;text-align: center" scope="col">Rango peligroso</th>
+          <th style="background:#0070C0;color:white;text-align: center" scope="col">Rango deseado</th>
+          <th style="background:#0070C0;color:white;text-align: center" scope="col">Resultado del estudio</th>
       </tr>
   </thead>
   <tbody>
       <tr>
-          <th>Colesterol total</th>
-          <th>menor a 125 o mayor a 200 mg/dl</th>
-          <th>entre 125-200 mg/dl</th>
-          <th>{{ $patient->col }}</th>
+          <th style="background:#0070C0;color:white;text-align: center">Colesterol total</th>
+          <th style="font-weight:normal;text-align: center">menor a 125 o mayor a 200 mg/dl</th>
+          <th style="font-weight:normal;text-align: center">entre 125-200 mg/dl</th>
+          <th style="font-weight:normal;text-align: center">{{ $patient->col }} mg/dl</th>
       </tr>
       <tr>
-        <th>HDL</th>
-        <th>menor a 50 mg/dl </th>
-        <th>mayor a 60 mg/dl</th>
-        <th>{{ $patient->hdl }}</th>
+        <th style="background:#0070C0;color:white;text-align: center">HDL</th>
+        <th style="font-weight:normal;text-align: center">menor a 50 mg/dl </th>
+        <th style="font-weight:normal;text-align: center">mayor a 60 mg/dl</th>
+        <th style="font-weight:normal;text-align: center">{{ $patient->hdl }} mg/dl</th>
       </tr>
       <tr>
-        <th>LDL</th>
-        <th>mayor a 100 mg/dl</th>
-        <th>menor a 100 mg/dl</th>
-        <th>{{ $patient->ldl }}</th>
+        <th style="background:#0070C0;color:white;text-align: center">LDL</th>
+        <th style="font-weight:normal;text-align: center">mayor a 100 mg/dl</th>
+        <th style="font-weight:normal;text-align: center">menor a 100 mg/dl</th>
+        <th style="font-weight:normal;text-align: center">{{ $patient->ldl }} mg/dl</th>
       </tr>
       <tr>
-        <th>Triglicéridos</th>
-        <th>mayor a 200 mg/dl</th>
-        <th>menor a 200 mg/dl</th>
-        <th>{{ $patient->trigliceridos }}</th>
+        <th style="background:#0070C0;color:white;text-align: center">Triglicéridos</th>
+        <th style="font-weight:normal;text-align: center">mayor a 200 mg/dl</th>
+        <th style="font-weight:normal;text-align: center">menor a 200 mg/dl</th>
+        <th style="font-weight:normal;text-align: center">{{ $patient->trigliceridos }} mg/dl</th>
       </tr>
       @endforeach
   </tbody>
 </table>
 </div>
 </div>
+   
+  </div>
+  <div class="row ">
+    <div class="col-5">
+    </div>
+    <div class="col-5">
+      <div class="container align-middle">
+      <a href="/patients" class="btn btn-lg text-white" style="background:#0070C0">Volver<a>
+    </div>
+    <div class="col-5">
+    </div>
 
-<a href="/patients" class="btn btn-link">Volver>
+    </div>
+  </div>
+</div>
+
+
 </body>
 </html>
